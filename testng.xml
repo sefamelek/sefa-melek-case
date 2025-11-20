@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Insider Test Suite - Sefa Melek" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="com.insider.listeners.AllureExecutorListener"/>
+    </listeners>
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="false"/>
+        <classes>
+            <class name="com.insider.tests.InsiderCareerTest">
+                <methods>
+                    <include name="testFilterQAJobs"/>
+                    <include name="testHomePageOpensAndDisplaysCorrectTitle"/>
+                    <include name="testNavigateToCareersPageAndVerifyContent"/>
+                    <include name="testViewRoleButtonRedirectsToLever"/>
+                    <include name="testVerifyFilteredJobsMatchCriteria"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
