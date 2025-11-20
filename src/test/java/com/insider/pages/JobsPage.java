@@ -2,9 +2,9 @@ package com.insider.pages;
 
 import com.insider.locators.JobsPageLocators;
 import com.insider.utils.WebDriverUtils;
+import com.insider.utils.methods.AssertionUtils;
 import com.insider.utils.methods.ClickUtils;
 import com.insider.utils.methods.DropdownUtils;
-import com.insider.utils.methods.AssertionUtils;
 import com.insider.utils.methods.WaitUtils;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -42,18 +42,18 @@ public class JobsPage extends BasePage implements JobsPageLocators {
         By departmentValue = JobsPageLocators.departmentValue(department);
         WaitUtils.waitForVisibilityWithDynamicWait(filterWait, departmentValue);
         WaitUtils.waitForClickableWithDynamicWait(filterWait, departmentValue);
-        //WaitUtils.waitWithStaticWait(2000);
-
-        // Çerez pop-up'ını kapat
-        if (isDisplayed(CLOSE_COOKIES_BUTTON)) {
-            click(CLOSE_COOKIES_BUTTON);
-        }      
+        DropdownUtils.openDropdownWithDynamicWait(driver, filterWait, FILTER_DEPARTMENT_CONTAINER);
+        DropdownUtils.selectDropdownOptionByTextWithDynamicWait(driver, filterWait, FILTER_LOCATION_DROPDOWN_RESULTS, department);
+        
+        // Department bilgisi geldikten sonra iş listesinde seçilen department'a ait işlerin listelendiğini bekle
+       //waitForDepartmentJobsToBeListed(department);
+        
+         
+        
         // Open dropdown using utility method (özel timeout ile)
         DropdownUtils.openDropdownWithDynamicWait(driver, filterWait, FILTER_LOCATION_CONTAINER);
-        WaitUtils.waitWithStaticWait(1000);
-                // Select dropdown option by text using utility method (özel timeout ile)
+        // Select dropdown option by text using utility method (özel timeout ile)
         DropdownUtils.selectDropdownOptionByTextWithDynamicWait(driver, filterWait, FILTER_LOCATION_DROPDOWN_RESULTS, location);
-        //WaitUtils.waitWithStaticWait(60000);
 
     }
 
@@ -63,17 +63,23 @@ public class JobsPage extends BasePage implements JobsPageLocators {
         return isDisplayed(JOB_LIST);
     }
 
+
+
     /**
-     * İş listesinin görünür olduğunu doğrula
+     * İş listesinin görünür olduğunu doğrula ve filtrelerin doğru çalıştığını kontrol et
+     */
+    @Step("İş listesinin görünür olduğunu doğrula - Lokasyon: '{location}', Departman: '{department}'")
+    public void verifyJobListIsDisplayed(String location, String department) {
+        new JobValidator().verifyWithFilters(location, department);
+        attachScreenshot("İş Listesi Doğrulama - " + location + " - " + department);
+    }
+    
+    /**
+     * İş listesinin görünür olduğunu doğrula (filtre kontrolü olmadan - geriye dönük uyumluluk için)
      */
     @Step("İş listesinin görünür olduğunu doğrula")
     public void verifyJobListIsDisplayed() {
-        //scrollToElement(JOB_LIST);
-        WaitUtils.waitForClickableWithDynamicWait(filterWait, JOB_LIST);
-
-        AssertionUtils.assertElementDisplayedWithDynamicWait(
-                driver, wait, JOB_LIST, 
-                "İş listesi görünür değil");
+        new JobValidator().verifyVisible();
         attachScreenshot("İş Listesi Doğrulama");
     }
 
@@ -96,28 +102,108 @@ public class JobsPage extends BasePage implements JobsPageLocators {
      */
     @Step("Tüm iş ilanlarının filtre kriterlerine uygun olduğunu doğrula - Lokasyon: '{location}', Departman: '{department}'")
     public void verifyAllJobsMatchFilters(String location, String department) {
-        List<WebElement> jobs = WaitUtils.waitForAllElementsPresentWithDynamicWait(wait, JOB_ITEM);
-
-        for (WebElement job : jobs) {
-            WebDriverUtils.scrollToWebElement(driver, job);
-
-            String title = WebDriverUtils.getTextFromChildElement(job, POSITION_TITLE);
-            String dept = WebDriverUtils.getTextFromChildElement(job, POSITION_DEPARTMENT);
-            String loc = WebDriverUtils.getTextFromChildElement(job, POSITION_LOCATION);
-
-            if (!isJobMatching(title, dept, loc, location, department)) {
-                Assert.fail("Beklenen değer bulunamadı. Beklenen: Lokasyon='" + location + "', Departman='" + department + "', Pozisyon='Quality Assurance'");
-            }
-        }
-
+        new JobValidator().verifyAllMatchFilters(location, department);
         attachScreenshot("İş İlanları Filtre Doğrulama - " + location + " - " + department);
     }
 
-    private boolean isJobMatching(String title, String dept, String loc, String expectedLocation, String expectedDepartment) {
-        boolean positionMatches = title.contains("Quality Assurance");
-        boolean departmentMatches = dept.contains(expectedDepartment);
-        boolean locationMatches = loc.contains(expectedLocation);
-        return positionMatches && departmentMatches && locationMatches;
+    // ==================== INNER CLASS: JobValidator ====================
+    
+    /**
+     * İş listesi doğrulama işlemlerini yöneten inner class
+     * Validation mantığını JobsPage'den ayırarak daha modüler bir yapı sağlar
+     */
+    private class JobValidator {
+        
+        /**
+         * İş listesinin görünür olduğunu doğrula (basit kontrol)
+         */
+        void verifyVisible() {
+            WaitUtils.waitForClickableWithDynamicWait(filterWait, JOB_LIST);
+            AssertionUtils.assertElementDisplayedWithDynamicWait(
+                    driver, wait, JOB_LIST, 
+                    "İş listesi görünür değil");
+        }
+        
+        /**
+         * İş listesinin görünür olduğunu ve filtrelerle eşleştiğini doğrula
+         */
+        void verifyWithFilters(String location, String department) {
+            verifyVisible();
+            verifyNotEmpty();
+            verifyAtLeastOneMatches(location, department);
+        }
+        
+        /**
+         * Tüm işlerin filtrelerle eşleştiğini doğrula
+         */
+        void verifyAllMatchFilters(String location, String department) {
+            List<WebElement> jobs = WaitUtils.waitForAllElementsPresentWithDynamicWait(wait, JOB_ITEM);
+            for (WebElement job : jobs) {
+                JobInfo jobInfo = extractJobInfo(job);
+                if (!matchesFilters(jobInfo, location, department)) {
+                    Assert.fail("Beklenen değer bulunamadı. Beklenen: Lokasyon='" + location + 
+                            "', Departman='" + department + "', Pozisyon='Quality Assurance'");
+                }
+            }
+        }
+        
+        /**
+         * İş listesinin boş olmadığını doğrula
+         */
+        private void verifyNotEmpty() {
+            List<WebElement> jobs = WaitUtils.waitForAllElementsPresentWithDynamicWait(wait, JOB_ITEM);
+            Assert.assertTrue(jobs.size() > 0, 
+                "Filtreleme sonrası hiç iş bulunamadı. Filtreler doğru çalışmıyor olabilir.");
+        }
+        
+        /**
+         * En az bir işin filtrelerle eşleştiğini doğrula
+         */
+        private void verifyAtLeastOneMatches(String location, String department) {
+            List<WebElement> jobs = WaitUtils.waitForAllElementsPresentWithDynamicWait(wait, JOB_ITEM);
+            boolean found = jobs.stream()
+                    .map(this::extractJobInfo)
+                    .anyMatch(jobInfo -> matchesFilters(jobInfo, location, department));
+            
+            Assert.assertTrue(found, 
+                "Listede belirtilen filtrelerle eşleşen hiçbir iş bulunamadı. " +
+                "Beklenen: Lokasyon='" + location + "', Departman='" + department + "', Pozisyon='Quality Assurance'");
+        }
+        
+        /**
+         * İş öğesinden bilgileri çıkarır
+         */
+        private JobInfo extractJobInfo(WebElement job) {
+            WebDriverUtils.scrollToWebElement(driver, job);
+            String title = WebDriverUtils.getTextFromChildElement(job, POSITION_TITLE);
+            String dept = WebDriverUtils.getTextFromChildElement(job, POSITION_DEPARTMENT);
+            String loc = WebDriverUtils.getTextFromChildElement(job, POSITION_LOCATION);
+            return new JobInfo(title, dept, loc);
+        }
+        
+        /**
+         * İş bilgilerinin filtrelerle eşleşip eşleşmediğini kontrol eder
+         */
+        private boolean matchesFilters(JobInfo jobInfo, String expectedLocation, String expectedDepartment) {
+            return jobInfo.title.contains("Quality Assurance")
+                    && jobInfo.department.contains(expectedDepartment)
+                    && jobInfo.location.contains(expectedLocation);
+        }
+    }
+    
+    /**
+     * İş bilgilerini tutan veri sınıfı
+     */
+    private static class JobInfo {
+        final String title;
+        final String department;
+        final String location;
+        
+        JobInfo(String title, String department, String location) {
+            this.title = title;
+            this.department = department;
+            this.location = location;
+        }
     }
 
     @Step("View Role butonuna tıkla (Index: {index})")

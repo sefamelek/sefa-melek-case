@@ -8,6 +8,10 @@ import org.testng.annotations.Test;
 
 public class InsiderCareerTest extends BaseTest {
 
+    // Test verileri - tekrar eden değerler
+    private static final String TEST_LOCATION = "Istanbul, Turkiye";
+    private static final String TEST_DEPARTMENT = "Quality Assurance";
+
     @Test(priority = 1, description = "1- Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula")
     public void testHomePageOpensAndDisplaysCorrectTitle() {
         // Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula
@@ -38,8 +42,8 @@ public class InsiderCareerTest extends BaseTest {
 
         // Filtreleri uygula: Location → "Istanbul, Turkey", Department → "Quality Assurance"
         JobsPage jobsPage = openJobsPage();
-        jobsPage.filterJobs("Istanbul, Turkiye", "Quality Assurance");
-        jobsPage.verifyJobListIsDisplayed();
+        jobsPage.filterJobs(TEST_LOCATION, TEST_DEPARTMENT);
+        jobsPage.verifyJobListIsDisplayed(TEST_LOCATION, TEST_DEPARTMENT);
     }
 
     @Test(priority = 4, description = "4- Listelenen tüm iş ilanlarının filtrelere uygun olduğunu doğrula")
@@ -51,9 +55,9 @@ public class InsiderCareerTest extends BaseTest {
 
         // Filtreleri uygula
         JobsPage jobsPage = openJobsPage();
-        jobsPage.filterJobs("Istanbul, Turkiye", "Quality Assurance");
-        jobsPage.verifyJobListIsDisplayed();
-        jobsPage.verifyAllJobsMatchFilters("Istanbul, Turkiye", "Quality Assurance");
+        jobsPage.filterJobs(TEST_LOCATION, TEST_DEPARTMENT);
+        jobsPage.verifyJobListIsDisplayed(TEST_LOCATION, TEST_DEPARTMENT);
+        jobsPage.verifyAllJobsMatchFilters(TEST_LOCATION, TEST_DEPARTMENT);
     }
 
     @Test(priority = 5, description = "5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula")
@@ -64,8 +68,8 @@ public class InsiderCareerTest extends BaseTest {
         qaPage.clickSeeAllQaJobs();
 
         JobsPage jobsPage = openJobsPage();
-        jobsPage.filterJobs("Istanbul, Turkiye", "Quality Assurance");
-        jobsPage.verifyJobListIsDisplayed();
+        jobsPage.filterJobs(TEST_LOCATION, TEST_DEPARTMENT);
+        jobsPage.verifyJobListIsDisplayed(TEST_LOCATION, TEST_DEPARTMENT);
         jobsPage.clickViewRole(0);
         jobsPage.switchToNewTab();
         jobsPage.verifyUrlContains("lever.co");

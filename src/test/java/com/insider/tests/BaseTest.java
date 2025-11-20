@@ -73,7 +73,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters({"browser", "headless"})
-    public void setUp(@Optional("chrome") String browser, @Optional("true") String headless) throws java.net.MalformedURLException {
+    public void setUp(@Optional("chrome") String browser, @Optional("false") String headless) throws java.net.MalformedURLException {
         WebDriver webDriver;
         String gridUrl = System.getProperty("selenium.grid.url");
         boolean isHeadless = Boolean.parseBoolean(headless);

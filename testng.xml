@@ -6,15 +6,15 @@
     </listeners>
     <test name="Chrome Test">
         <parameter name="browser" value="chrome"/>
-        <parameter name="headless" value="false"/>
+        <parameter name="headless" value="true"/>
         <classes>
             <class name="com.insider.tests.InsiderCareerTest">
                 <methods>
-                    <include name="testFilterQAJobs"/>
                     <include name="testHomePageOpensAndDisplaysCorrectTitle"/>
                     <include name="testNavigateToCareersPageAndVerifyContent"/>
-                    <include name="testViewRoleButtonRedirectsToLever"/>
+                    <include name="testFilterQAJobs"/>
                     <include name="testVerifyFilteredJobsMatchCriteria"/>
+                    <include name="testViewRoleButtonRedirectsToLever"/>
                 </methods>
             </class>
         </classes>
