@@ -1,4 +1,4 @@
-# Insider Career Test Automation
+# Sefa Melek Case
 
 Insider web sitesi için Selenium WebDriver kullanılarak geliştirilmiş otomatik test projesi. Bu proje, Insider'ın kariyer sayfalarındaki iş ilanlarını test eder.
 
@@ -47,7 +47,7 @@ Insider web sitesi için Selenium WebDriver kullanılarak geliştirilmiş otomat
 
 ```bash
 git clone <repository-url>
-cd insider
+cd sefa-melek-case
 ```
 
 ### 2. Bağımlılıkları Yükleyin

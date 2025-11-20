@@ -2,7 +2,7 @@
 <Configuration status="WARN">
     <Properties>
         <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
-        <Property name="LOG_FILE_PATH">logs/insider-automation.log</Property>
+        <Property name="LOG_FILE_PATH">logs/sefa-melek-case.log</Property>
     </Properties>
 
     <Appenders>
@@ -14,7 +14,7 @@
 
         <!-- File Appender - Tüm loglar (INFO, DEBUG, WARN, ERROR) dosyaya kaydedilir -->
         <RollingFile name="FileAppender" fileName="${LOG_FILE_PATH}"
-                     filePattern="logs/insider-automation-%d{yyyy-MM-dd}-%i.log.gz">
+                     filePattern="logs/sefa-melek-case-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <!-- Günlük olarak log dosyası rotate edilir -->
