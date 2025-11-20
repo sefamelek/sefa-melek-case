@@ -8535,3 +8535,164 @@ Session ID: 06d2169b74118190616195ad87179664
 2025-11-20 16:41:17.343 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
 2025-11-20 16:41:17.343 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula (Süre: 24132 ms)
 2025-11-20 16:41:17.343 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:10.058 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:10.058 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:10.062 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 1- Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula
+2025-11-20 16:48:10.062 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 2- Company → Careers menüsüne gir ve sayfa içeriklerinin görünür olduğunu doğrula
+2025-11-20 16:48:10.062 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:10.062 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:10.233 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Navigated to: https://useinsider.com/
+2025-11-20 16:48:16.388 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-accept-all-btn
+2025-11-20 16:48:16.435 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.xpath: .//a[contains(text(), 'Company')]
+2025-11-20 16:48:16.836 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Navigated to: https://useinsider.com/
+2025-11-20 16:48:17.033 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-accept-all-btn
+2025-11-20 16:48:17.034 [TestNG-test-Chrome Test-1] INFO  com.insider.pages.HomePage - Insider ana sayfası başlığı kontrol ediliyor - Beklenen: 'Insider'
+2025-11-20 16:48:17.047 [TestNG-test-Chrome Test-1] INFO  com.insider.pages.HomePage - ✅ Insider ana sayfası başlığı doğrulandı - Gerçek başlık: '#1 Leader in Individualized, Cross-Channel CX — Insider'
+2025-11-20 16:48:17.211 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:17.211 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 1- Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula (Süre: 7148 ms)
+2025-11-20 16:48:17.211 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:18.413 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:18.413 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 3- QA işlerini filtrele ve iş listesinin görünür olduğunu doğrula
+2025-11-20 16:48:18.413 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:18.918 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.cssSelector: a.dropdown-sub[href*='careers']
+2025-11-20 16:48:18.918 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Lokasyon bloğu kontrol ediliyor...
+2025-11-20 16:48:18.931 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Lokasyon bloğu görünür: true
+2025-11-20 16:48:18.941 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: career-our-location
+2025-11-20 16:48:20.069 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:20.318 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:21.919 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:48:24.029 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 5 seconds
+2025-11-20 16:48:24.117 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Takımlar bloğu kontrol ediliyor...
+2025-11-20 16:48:24.132 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Takımlar bloğu görünür: true
+2025-11-20 16:48:24.141 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: career-find-our-calling
+2025-11-20 16:48:29.219 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 5 seconds
+2025-11-20 16:48:29.349 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Life at Insider bloğu kontrol ediliyor...
+2025-11-20 16:48:29.363 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Life at Insider bloğu görünür: true
+2025-11-20 16:48:29.377 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: section[data-id='a8e7b90']
+2025-11-20 16:48:30.930 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:48:31.027 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:48:32.056 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:48:32.124 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:48:32.160 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:48:37.423 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Scroll did not complete - element was never fully visible within 8 seconds
+2025-11-20 16:48:40.492 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 3 seconds
+2025-11-20 16:48:40.645 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:40.645 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 2- Company → Careers menüsüne gir ve sayfa içeriklerinin görünür olduğunu doğrula (Süre: 30589 ms)
+2025-11-20 16:48:40.645 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:41.720 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:41.720 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 4- Listelenen tüm iş ilanlarının filtrelere uygun olduğunu doğrula
+2025-11-20 16:48:41.721 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:42.210 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:48:42.322 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:42.322 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 3- QA işlerini filtrele ve iş listesinin görünür olduğunu doğrula (Süre: 23908 ms)
+2025-11-20 16:48:42.322 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:42.634 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:42.869 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:43.178 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:43.178 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula
+2025-11-20 16:48:43.178 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:48:44.154 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:44.359 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:48:44.421 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:48:45.953 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:48:48.979 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:48:49.024 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:48:50.053 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:48:50.110 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:48:50.141 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:48:55.613 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:48:55.658 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:48:56.703 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:48:56.761 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:48:56.793 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:49:00.196 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:49:00.385 [TestNG-test-Chrome Test-2] ERROR com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:00.385 [TestNG-test-Chrome Test-2] ERROR com.insider.listeners.ScreenshotListener - ❌ TEST BAŞARISIZ: 4- Listelenen tüm iş ilanlarının filtrelere uygun olduğunu doğrula (Süre: 18660 ms)
+2025-11-20 16:49:00.386 [TestNG-test-Chrome Test-2] ERROR com.insider.listeners.ScreenshotListener - Hata: Beklenen değer bulunamadı. Beklenen: Lokasyon='Istanbul, Turkiye', Departman='Quality Assurance', Pozisyon='Quality Assurance'
+2025-11-20 16:49:00.386 [TestNG-test-Chrome Test-2] ERROR com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:06.832 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:49:06.979 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.ClickUtils - Clicked element at index 0 with JS and dynamic wait: By.xpath: .//a[contains(text(), 'View Role')]
+2025-11-20 16:49:07.044 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Switched to new tab: 400D49F6B3F35D1EF5CF87C204557A8D
+2025-11-20 16:49:09.306 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:09.306 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula (Süre: 26127 ms)
+2025-11-20 16:49:09.306 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:28.581 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:28.581 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:28.583 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 1- Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula
+2025-11-20 16:49:28.583 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 2- Company → Careers menüsüne gir ve sayfa içeriklerinin görünür olduğunu doğrula
+2025-11-20 16:49:28.583 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:28.583 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:28.730 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Navigated to: https://useinsider.com/
+2025-11-20 16:49:34.718 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-accept-all-btn
+2025-11-20 16:49:34.771 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.xpath: .//a[contains(text(), 'Company')]
+2025-11-20 16:49:37.629 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.cssSelector: a.dropdown-sub[href*='careers']
+2025-11-20 16:49:37.630 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Lokasyon bloğu kontrol ediliyor...
+2025-11-20 16:49:37.646 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Lokasyon bloğu görünür: true
+2025-11-20 16:49:37.662 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: career-our-location
+2025-11-20 16:49:38.195 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Navigated to: https://useinsider.com/
+2025-11-20 16:49:38.325 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-accept-all-btn
+2025-11-20 16:49:38.326 [TestNG-test-Chrome Test-1] INFO  com.insider.pages.HomePage - Insider ana sayfası başlığı kontrol ediliyor - Beklenen: 'Insider'
+2025-11-20 16:49:38.337 [TestNG-test-Chrome Test-1] INFO  com.insider.pages.HomePage - ✅ Insider ana sayfası başlığı doğrulandı - Gerçek başlık: '#1 Leader in Individualized, Cross-Channel CX — Insider'
+2025-11-20 16:49:38.823 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:38.824 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 1- Insider ana sayfasının açıldığını ve başlığın doğru olduğunu doğrula (Süre: 10235 ms)
+2025-11-20 16:49:38.824 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:40.403 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:40.403 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 3- QA işlerini filtrele ve iş listesinin görünür olduğunu doğrula
+2025-11-20 16:49:40.403 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:49:42.007 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:49:42.226 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:49:42.749 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 5 seconds
+2025-11-20 16:49:43.017 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Takımlar bloğu kontrol ediliyor...
+2025-11-20 16:49:43.030 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Takımlar bloğu görünür: true
+2025-11-20 16:49:43.039 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: career-find-our-calling
+2025-11-20 16:49:43.829 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:49:48.045 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 5 seconds
+2025-11-20 16:49:48.375 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Life at Insider bloğu kontrol ediliyor...
+2025-11-20 16:49:48.386 [TestNG-test-Chrome Test-2] INFO  com.insider.pages.CareersPage - Life at Insider bloğu görünür: true
+2025-11-20 16:49:48.398 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: section[data-id='a8e7b90']
+2025-11-20 16:49:49.123 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:49:49.178 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:49:50.199 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:49:50.257 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:49:50.288 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:49:56.528 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Scroll did not complete - element was never fully visible within 8 seconds
+2025-11-20 16:49:59.633 [TestNG-test-Chrome Test-2] WARN  com.insider.utils.methods.JavaScriptUtils - Element did not become fully visible within 3 seconds
+2025-11-20 16:50:00.296 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:00.296 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 2- Company → Careers menüsüne gir ve sayfa içeriklerinin görünür olduğunu doğrula (Süre: 31717 ms)
+2025-11-20 16:50:00.296 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:00.333 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:50:00.650 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:00.650 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 3- QA işlerini filtrele ve iş listesinin görünür olduğunu doğrula (Süre: 20245 ms)
+2025-11-20 16:50:00.650 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:02.123 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:02.124 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 4- Listelenen tüm iş ilanlarının filtrelere uygun olduğunu doğrula
+2025-11-20 16:50:02.124 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:02.224 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:02.225 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ▶ TEST BAŞLADI: 5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula
+2025-11-20 16:50:02.226 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:03.761 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:50:03.960 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:50:04.192 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:50:04.405 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element with JS: By.cssSelector: a.btn[href*='open-positions'][href*='qualityassurance']
+2025-11-20 16:50:05.537 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:50:05.981 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Scrolled to element: By.id: select2-filter-by-location-container
+2025-11-20 16:50:11.270 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:50:11.319 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:50:12.346 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:50:12.409 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:50:12.442 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:50:18.856 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Clicked element: By.id: wt-cli-reject-btn
+2025-11-20 16:50:18.902 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Opened dropdown container: By.id: select2-filter-by-location-container
+2025-11-20 16:50:19.922 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Dropdown results are visible
+2025-11-20 16:50:19.973 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Target option found: Istanbul, Turkiye
+2025-11-20 16:50:20.006 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.ClickUtils - Successfully clicked with normal click
+2025-11-20 16:50:22.451 [TestNG-test-Chrome Test-1] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:50:23.056 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:23.056 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 4- Listelenen tüm iş ilanlarının filtrelere uygun olduğunu doğrula (Süre: 20932 ms)
+2025-11-20 16:50:23.056 [TestNG-test-Chrome Test-1] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:30.053 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.DropdownUtils - Dropdown closed successfully, option selected: Istanbul, Turkiye
+2025-11-20 16:50:30.412 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.methods.ClickUtils - Clicked element at index 0 with JS and dynamic wait: By.xpath: .//a[contains(text(), 'View Role')]
+2025-11-20 16:50:30.418 [TestNG-test-Chrome Test-2] INFO  com.insider.utils.WebDriverUtils - Switched to new tab: FC9B5A6003B1CBB5BA9A8DC94D3B7329
+2025-11-20 16:50:32.906 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
+2025-11-20 16:50:32.906 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ✅ TEST TAMAMLANDI: 5- View Role butonuna tıkla ve lever.co'ya yönlendirdiğini doğrula (Süre: 30681 ms)
+2025-11-20 16:50:32.906 [TestNG-test-Chrome Test-2] INFO  com.insider.listeners.ScreenshotListener - ═══════════════════════════════════════════════════════════
